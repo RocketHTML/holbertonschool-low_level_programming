@@ -11,7 +11,8 @@ int main(void)
 
 	while (letter < 26)
 	{
-		putchar('a' + letter);
+		if (('a' + letter) != 'q' && ('a' + letter) != 'e')
+			putchar('a' + letter);
 		letter++;
 	}
 	putchar('\n');
