@@ -7,26 +7,28 @@
  */
 int main(void)
 {
-	int right = 48;
+	int right_base = 48;
 	int left = 48;
+	int iteration = 1;
+	int right = right_base;
 
-	while (left < 58)
+	while (left < 57)
 	{
+		right = right_base + iteration++;
 		while (right < 58)
 		{
 			putchar(left);
 			putchar(right++);
-			if (right == 58)
+			if (right >= 58)
 			{
 				left++;
 			}
-			if (left < 58)
+			if (left < 57)
 			{
 				putchar(44);
 				putchar(32);
 			}
 		}
-		right = 48;
 	}
 	putchar('\n');
 	return (0);
