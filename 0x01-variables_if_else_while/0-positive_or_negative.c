@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
-/* main - Entry point of the program */
-
-/* Return: always returns 0 */
+/**
+ * main - Entry point of the program
+ *
+ * Return: always returns 0
+ */
 int main(void)
 {
 	int n;
@@ -16,5 +19,6 @@ int main(void)
 		printf("%d is negative", n);
 	else
 		printf("%d is zero", n);
+	printf("\n");
 	return (0);
 }
