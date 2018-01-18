@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int current = 0;
+	int current = 48;
 
-	while (current < 10)
+	while (current < 58)
 	{
 		putchar(current++);
 	}
