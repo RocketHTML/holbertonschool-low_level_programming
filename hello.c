@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	times_table();
+	printf("%d\n", add(10, 20));
 	return (0);
 }
