@@ -3,6 +3,8 @@ s=""
 while [ "$#" -gt 0 ]
 do
   s="${s} $1"
+  ./betty/betty-style.pl $1
+  ./betty/betty-doc.pl $1
   shift
 done
 
