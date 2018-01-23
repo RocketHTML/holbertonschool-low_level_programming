@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "0x02-functions_nested_loops/holberton.h"
 
 /**
  * main - Entry point
@@ -7,6 +8,6 @@
  */
 int main(void)
 {
-	printf("%d\n", -101 % 10);
+	print_alphabet();
 	return (0);
 }

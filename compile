@@ -1,0 +1,9 @@
+#!/bin/bash
+s=""
+while [ "$#" -gt 0 ]
+do
+  s="${s} $1"
+  shift
+done
+
+gcc -Wall -Werror -Wextra -pedantic ${s} helpers.c -o compost
