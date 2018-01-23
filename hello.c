@@ -8,6 +8,10 @@
  */
 int main(void)
 {
-	print_alphabet_x10();
+	if (_islower('A'))
+		_putchar('y');
+	else
+		_putchar('n');
+	_putchar('\n');
 	return (0);
 }
