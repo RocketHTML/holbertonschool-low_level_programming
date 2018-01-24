@@ -12,7 +12,7 @@ void fib_sum(long int n)
 	long int c = a + b;
 	long int sum = 0;
 
-	while (c <= n)
+	while (b <= n)
 	{
 		a = b;
 		b = c;
@@ -31,5 +31,6 @@ void fib_sum(long int n)
 int main(void)
 {
 	fib_sum(4000000);
+
 	return (0);
 }
