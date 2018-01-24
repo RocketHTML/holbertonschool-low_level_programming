@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -21,4 +20,15 @@ void natural_sum(void)
 		c3 += 3;
 	}
 	printf("%d\n", sum);
+}
+
+/**
+ * main - entry point
+ *
+ * Return: always returns 0 (success)
+ */
+int main(void)
+{
+	natural_sum();
+	return (0);
 }
