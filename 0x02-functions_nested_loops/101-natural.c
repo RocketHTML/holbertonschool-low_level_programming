@@ -11,7 +11,8 @@ void natural_sum(void)
 
 	while (c5 < 1024)
 	{
-		sum += c5;
+		if (c5 % 3 != 0)
+			sum += c5;
 		c5 += 5;
 	}
 	while (c3 < 1024)
