@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	}
 	if (negative)
 		dec = dec * -1;
-	printf("dec is: %d\n", dec);
-	print_to_98(dec);
+	printf("Input is: %d\n\n", dec);
+	print_times_table(dec);
 	return (0);
 }
