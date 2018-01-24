@@ -7,9 +7,7 @@
  */
 void print_times_table(int n)
 {
-	int row = 0;
-	int col = 0;
-	int calc = row * col;
+	int row = 0, col = 0, calc, m, digits = 1, divisor = 1;
 
 	while (row <= n && n > 0 && n <= 15)
 	{
@@ -26,18 +24,18 @@ void print_times_table(int n)
 					_putchar(' ');
 			}
 			{
-				int digits = 1;
-				int divisor = 1;
-				int m = calc;
+				digits = 1;
+				divisor = 1;
 
-				while (m / divisor >= 10)
+				while (calc / divisor >= 10)
 				{
 					digits++;
 					divisor *= 10;
 				}
 				while (digits-- > 0)
 				{
-					_putchar(m % (divisor * 10) / divisor + '0');
+					m = calc % (divisor * 10) / divisor;
+					_putchar(m + '0');
 					divisor /= 10;
 				}
 			}
