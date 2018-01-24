@@ -12,15 +12,17 @@ void fib_sum(long int n)
 	long int c = a + b;
 	long int sum = 0;
 
-	while (b <= n)
+	while (c <= n)
 	{
 		a = b;
 		b = c;
 		c = a + b;
-		if (c % 2 == 0)
+		if (c % 2 == 0 && c <= n)
+		{
 			sum += c;
+		}
 	}
-	printf("%ld\n", c);
+	printf("%ld\n", sum);
 }
 
 /**
