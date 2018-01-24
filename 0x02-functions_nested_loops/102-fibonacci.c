@@ -9,7 +9,7 @@
  */
 long int fibonacci(int n)
 {
-	long int depth = 2, a = 1, b = 1;
+	long int depth = 2, a = 0, b = 1;
 	long int c = a + b;
 
 	printf("%d, ", 1);
