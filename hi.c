@@ -8,6 +8,9 @@
  */
 int main(void)
 {
-	print_square(20);
+	print_number(20);
+	putchar('\n');
+	print_number(123654);
+	putchar('\n');
 	return (0);
 }
