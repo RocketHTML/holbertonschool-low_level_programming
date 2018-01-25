@@ -6,9 +6,9 @@
  */
 void fizz_buzz(void)
 {
-	int i = 0;
-	char[] fizz = {"Fizz"};
-	char[] buzz = {"Buzz"};
+	int i = 1;
+	char fizz[] = {"Fizz"};
+	char buzz[] = {"Buzz"};
 
 	while (i <= 100)
 	{
@@ -29,6 +29,7 @@ void fizz_buzz(void)
 /**
  * main - entry point
  *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
