@@ -6,14 +6,15 @@
  *
  * Return: Always 0 (Success)
  */
-int maini(void)
+int main(void)
 {
 	int i = _isupper('A');
 	int j = _isupper('b');
 	int k = _isupper('!');
 
-	_putchar(j);
-	_putchar(k);
+	_putchar(i + '0');
+	_putchar(j + '0');
+	_putchar(k + '0');
 	_putchar('\n');
 	return (0);
 }
