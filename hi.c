@@ -8,13 +8,6 @@
  */
 int main(void)
 {
-	int i = _isupper('A');
-	int j = _isupper('b');
-	int k = _isupper('!');
-
-	_putchar(i + '0');
-	_putchar(j + '0');
-	_putchar(k + '0');
-	_putchar('\n');
+	print_most_numbers();
 	return (0);
 }
