@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	more_numbers();
+	print_square(20);
 	return (0);
 }
