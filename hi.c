@@ -8,9 +8,6 @@
  */
 int main(void)
 {
-	print_number(20);
-	putchar('\n');
-	print_number(123654);
-	putchar('\n');
+	print_triangle(10);
 	return (0);
 }
