@@ -9,7 +9,8 @@
  */
 void fib98(int n)
 {
-	long int depth = 2, a = 0, b = 1;
+	int depth = 2;
+	unsigned long int a = 0, b = 1;
 	unsigned long int c = a + b;
 
 	printf("%d, ", 1);

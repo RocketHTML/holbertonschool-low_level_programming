@@ -1,5 +1,5 @@
 #!/bin/bash
-header=0x02-functions_nested_loops/holberton.h
+header=0x03-more_functions_nested_loops/holberton.h
 sed -i '$ d' $header
 echo $1 >> $header
 echo "#endif" >> $header
