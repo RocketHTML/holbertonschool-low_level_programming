@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	print_triangle(10);
+	print_diagonal(0);
 	return (0);
 }
