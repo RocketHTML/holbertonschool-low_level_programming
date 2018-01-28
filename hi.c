@@ -1,5 +1,6 @@
-#include "stdio.h"
+#include <stdio.h>
 #include "0x03-more_functions_nested_loops/holberton.h"
+#include <limits.h>
 
 /**
  * main - Entry point
@@ -8,9 +9,11 @@
  */
 int main(void)
 {
-	print_number(-2147483647);
-	_putchar('\n');
-	print_number(2147483647);
-	_putchar('\n');
+	printf("largest number: %d\n", INT_MAX);
+	printf("smallest number: %d\n", INT_MIN);
+	print_number(INT_MAX);
+	putchar('\n');
+	print_number(INT_MIN);
+	putchar('\n');
 	return (0);
 }
