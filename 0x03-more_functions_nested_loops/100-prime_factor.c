@@ -1,30 +1,30 @@
-#include <stdio.h>
+#include "stdio.h"
 
 /**
- * prime_factor - prints the largest prime factor
- * @y: current largest prime
- * @n: number to factor
+ * main - Entry point
  *
- * Return: largest prime factor
- */
-int prime_factor(int x, int n)
-{
-	int mid = n / 2;
-	int i;
-	int x;
-
-	for (i = 0; i < mid; i++)
-	{
-		return (1);	
-	}
-}
-
-/**
- * main - entry point
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int result = prime_factor(1, 612852475143);
+	unsigned long int N = 612852475143;
+	unsigned long int n = N;
+	unsigned long int d;
+	unsigned long int lp = 0;
+
+	for (d = 2; d < n / 2; d++)
+	{
+		if (n % d == 0)
+		{
+			n = n / d;
+			if (d > lp)
+				lp = d;
+			d = 1;
+		}
+	}
+	if (n > lp)
+		lp = n;
+
+	printf("%lu\n", lp);
 	return (0);
 }
