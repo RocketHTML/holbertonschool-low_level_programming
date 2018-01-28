@@ -8,24 +8,28 @@
  */
 int main(void)
 {
-	unsigned long int N = 612852475143;
-	unsigned long int n = N;
-	unsigned long int d;
-	unsigned long int lp = 0;
+	int n = 0;
+	int d = 1;
 
-	for (d = 2; d < n/2; d++)
+	if (n == 0)
 	{
-		if (n % d == 0)
-		{
-			n = n / d;
-			if (d > lp)
-				lp = d;
-			d = 1;
-		}
+		_putchar('0');
+		_putchar('\n');
+		return (0);
 	}
-	if (n > lp)
-		lp = n;
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	while (n >= d)
+		d *= 10;
 
-	printf("N: %lu\nLargest Prime: %lu\n", N, lp);
+	for (d = d / 10; d >= 1; d = d / 10)
+	{
+		_putchar(n / d + '0');
+		n = n % d;
+	}
+	_putchar('\n');
 	return (0);
 }
