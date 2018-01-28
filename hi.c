@@ -8,28 +8,6 @@
  */
 int main(void)
 {
-	int n = 0;
-	int d = 1;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		_putchar('\n');
-		return (0);
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	while (n >= d)
-		d *= 10;
-
-	for (d = d / 10; d >= 1; d = d / 10)
-	{
-		_putchar(n / d + '0');
-		n = n % d;
-	}
-	_putchar('\n');
+	print_number()
 	return (0);
 }

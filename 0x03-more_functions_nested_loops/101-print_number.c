@@ -1,8 +1,7 @@
-#include "holberton.h"
-
 /**
- * print_number - Entry point
+ * print_number - prints an integer
  *
+ * @n: number to be printed
  */
 void print_number(int n)
 {
@@ -11,7 +10,6 @@ void print_number(int n)
 	if (n == 0)
 	{
 		_putchar('0');
-		_putchar('\n');
 		return;
 	}
 
@@ -29,7 +27,5 @@ void print_number(int n)
 		_putchar(n / d + '0');
 		n = n % d;
 	}
-
-	_putchar('\n');
 
 }
