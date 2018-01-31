@@ -9,9 +9,8 @@
  */
 int main(void)
 {
-	char *str;
-
-	str = "";
-	puts2(str);
+	char str[10] = "Holbie";
+	rev_string(str);
+	printf("%s\n", str);
 	return (0);
 }
