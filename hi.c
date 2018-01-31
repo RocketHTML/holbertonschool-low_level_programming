@@ -10,10 +10,8 @@
 int main(void)
 {
 	int a = 5;
-	int b = 7;
 	
-	swap_int(&a, &b);
+	reset_to_98(&a);
 	printf("a: %d\n", a);
-	printf("b: %d\n", b);
 	return (0);
 }
