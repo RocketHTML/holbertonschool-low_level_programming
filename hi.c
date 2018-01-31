@@ -9,11 +9,11 @@
  */
 int main(void)
 {
-	char *str;
-	int len;
+	int a = 5;
+	int b = 7;
 	
-	str = "Holby";
-	len = _strlen(str);
-	printf("%d\n", len);
+	swap_int(&a, &b);
+	printf("a: %d\n", a);
+	printf("b: %d\n", b);
 	return (0);
 }
