@@ -12,6 +12,6 @@ int main(void)
 	char *str;
 	
 	str = "Holby";
-	print_rev(str);
+	_puts(str);
 	return (0);
 }
