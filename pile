@@ -1,0 +1,8 @@
+#!/bin/bash
+s=""
+runner="hi.c"
+func=0x04-pointers_arrays_strings/$1
+./betty/betty-style.pl $func
+./betty/betty-doc.pl $func
+
+gcc -Wall -Werror -Wextra -pedantic $runner $func helpers.c -o compost

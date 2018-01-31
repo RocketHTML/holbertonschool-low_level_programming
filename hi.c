@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "0x03-more_functions_nested_loops/holberton.h"
+#include "0x04-pointers_arrays_strings/holberton.h"
 #include <limits.h>
 
 /**
@@ -9,11 +9,13 @@
  */
 int main(void)
 {
-	printf("largest number: %d\n", INT_MAX);
-	printf("smallest number: %d\n", INT_MIN);
-	print_number(INT_MAX);
-	putchar('\n');
-	print_number(INT_MIN);
-	putchar('\n');
+	int array[5];
+
+	array[0] = 98;
+	array[1] = 402;
+	array[2] = -198;
+	array[3] = 298;
+	array[4] = -1024;
+	print_array(array, 5);
 	return (0);
 }
