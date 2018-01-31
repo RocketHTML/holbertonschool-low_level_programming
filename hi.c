@@ -12,6 +12,6 @@ int main(void)
 	char *str;
 
 	str = "";
-	puts_half(str);
+	puts2(str);
 	return (0);
 }
