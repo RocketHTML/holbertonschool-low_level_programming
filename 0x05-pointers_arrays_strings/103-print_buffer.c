@@ -12,12 +12,14 @@ void print_buffer(char *b, int size)
 	int offset_hex = 0;
 	int offset_char = 0;
 	int count = 0;
+	int c;
 
 	while (size > offset)
 	{
 		printf("%08x: ", offset);
 		for (count = 1; count <= 15; count++)
 		{
+			c = b[offset_hex];
 			if (count % 3 == 0)
 			{
 				putchar(' ');
@@ -25,12 +27,10 @@ void print_buffer(char *b, int size)
 			}
 			if (offset_hex >= size)
 				printf("  ");
-			else if (b[offset_hex] > 31)
-				printf("%02x", b[offset_hex]);
-			else if (b[offset_hex] < 32 && b[offset_hex] < 10)
+			else if (c > 31 || (c > 0 && c < 8) || c == 10)
+				printf("%02x", c);
+			else if (c < 32)
 				printf("00");
-			else
-				printf("0a");
 			offset_hex++;
 		}
 		for (count = 0; count < 10; count++)
