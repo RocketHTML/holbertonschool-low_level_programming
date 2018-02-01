@@ -27,11 +27,12 @@ void print_buffer(char *b, int size)
 				printf("  ");
 			else if (b[offset_hex] > 31)
 				printf("%02x", b[offset_hex]);
-			else if (b[offset_hex] < 32)
+			else if (b[offset_hex] < 32 && b[offset_hex] < 10)
 				printf("00");
+			else
+				printf("0a");
 			offset_hex++;
 		}
-
 		for (count = 0; count < 10; count++)
 		{
 			if (offset_char >= size)
@@ -45,7 +46,6 @@ void print_buffer(char *b, int size)
 		putchar('\n');
 		offset += 10;
 	}
-
 	if (size <= 0)
-	putchar('\n');
+		putchar('\n');
 }
