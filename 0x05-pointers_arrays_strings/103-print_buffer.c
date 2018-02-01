@@ -27,19 +27,18 @@ void print_buffer(char *b, int size)
 			}
 			if (offset_hex >= size)
 				printf("  ");
-			else if (c > 31 || (c > 0 && c < 8) || c == 10)
+			else
 				printf("%02x", c);
-			else if (c < 32)
-				printf("00");
 			offset_hex++;
 		}
 		for (count = 0; count < 10; count++)
 		{
+			c = b[offset_char];
 			if (offset_char >= size)
 				break;
-			else if (b[offset_char] > 31)
+			else if (c > 31 && c < 127)
 				putchar(b[offset_char]);
-			else if (b[offset_char] < 31)
+			else
 				putchar('.');
 			offset_char++;
 		}
