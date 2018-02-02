@@ -9,15 +9,11 @@
  */
 int main(void)
 {
-	print_number(98);
-    putchar('\n');
-    print_number(INT_MAX);
-    putchar('\n');
-    print_number(INT_MIN);
-    putchar('\n');
-    print_number(0);
-    putchar('\n');
-    print_number(-98);
-    putchar('\n');
-    return (0);
+	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+	char *p;
+
+	p = leet(s);
+	printf("%s", p);
+	printf("%s", s);
+	return (0);
 }
