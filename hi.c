@@ -15,11 +15,7 @@ int main(void)
 
     printf("%s\n", s1);
     printf("%s", s2);
-    p = _strncat(s1, s2, 1);
-    printf("%s\n", s1);
-    printf("%s", s2);
-    printf("%s\n", p);
-    p = _strncat(s1, s2, 1024);
+    p = _strcat(s1, s2);
     printf("%s", s1);
     printf("%s", s2);
     printf("%s", p);
