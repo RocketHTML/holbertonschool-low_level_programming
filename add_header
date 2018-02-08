@@ -1,5 +1,5 @@
 #!/bin/bash
-header=0x06-pointers_arrays_strings/holberton.h
+header=$current_folder/holberton.h
 sed -i '$ d' $header
 echo $1 >> $header
 echo "#endif" >> $header
