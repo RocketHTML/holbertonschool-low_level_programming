@@ -73,7 +73,7 @@ void ctemplate(char *s)
   for (i = 0; s[i] != ' '; i++)
   {}
   i++;
-
+  printf("#include \"holberton.h\"\n\n");
   printf("/**\n * ");
   for (; s[i] != '('; i++)
   {
