@@ -6,3 +6,4 @@ func=$current_folder/$1
 ./betty/betty-doc.pl $func
 
 gcc -Wall -Werror -Wextra -pedantic $runner $func helpers.c -o post
+./post

@@ -1,5 +1,5 @@
 #!/bin/bash
-header=$current_folder/holberton.h
+header=$1/holberton.h
 sed -i '$ d' $header
-echo $1 >> $header
+echo $2 >> $header
 echo "#endif" >> $header

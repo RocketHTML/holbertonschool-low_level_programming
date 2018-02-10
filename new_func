@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+	echo "Usage: <filename> <prototype>"
+	exit 1
+fi
+
+if [ ! -d $current_folder ]; then
+mkdir $current_folder
+cp holberton.h $current_folder
+cp README.md $current_folder
+fi
+
+./add_header $current_folder "$2;"
+./add_header . "$2;"
+./create "$2" > $current_folder/$1
