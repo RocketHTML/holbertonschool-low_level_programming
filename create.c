@@ -87,7 +87,7 @@ void ctemplate(char *s)
   print_returntype(s);
   printf("\n */\n");
 
-  printf("%s\n{\n\n\treturn(0);\n}\n", s);
+  printf("%s\n{\n\n\treturn (0);\n}\n", s);
 }
 
 
