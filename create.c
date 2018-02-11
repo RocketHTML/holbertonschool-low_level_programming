@@ -14,7 +14,7 @@ void print_returntype(char *s)
 char *print_param(char *s)
 {
   char *ss = s;
-  char *a = " array";
+  char *a = "array";
   int isarray = 0;
   int i;
   int ret;
@@ -23,7 +23,7 @@ char *print_param(char *s)
   {}
   i++;
 
-  if (s[i] == '*')
+  while(s[i] == '*')
   {
     isarray++;
     i++;
@@ -40,8 +40,8 @@ char *print_param(char *s)
   for (i = 0; s[i] != ' '; i++)
     putchar(s[i]);
 
-  if (isarray)
-    printf("%s", a);
+  while (isarray--)
+    printf(" %s", a);
 
   return (s + ret);
 }
