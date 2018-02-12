@@ -1,5 +1,4 @@
-#include "holberton.h"
-
+void _putchar(int x);
 /**
  * _puts - print a string
  * @str: pointer to string to

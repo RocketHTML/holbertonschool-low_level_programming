@@ -4,7 +4,7 @@
  * @c: The character to print
  *
  * Return: void.
- * 
+ *
  */
 void _putchar(char c)
 {

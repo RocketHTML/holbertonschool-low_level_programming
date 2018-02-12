@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _abs - returns absolute value
  * @n: The character to be checked for sign

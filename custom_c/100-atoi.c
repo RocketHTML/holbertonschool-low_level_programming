@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _atoi - returns int
  * @s: char array

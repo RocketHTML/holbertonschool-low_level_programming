@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _strstr - locates a substring
  * @haystack: string to search
@@ -9,6 +8,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 	int j;
+	char *p = 0;
 
 	for (i = 0; haystack[i]; i++)
 	{
@@ -18,5 +18,5 @@ char *_strstr(char *haystack, char *needle)
 		if (needle[j] == '\0')
 			return (haystack + i);
 	}
-	return (NULL);
+	return (p);
 }

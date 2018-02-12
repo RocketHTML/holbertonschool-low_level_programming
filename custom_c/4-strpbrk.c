@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _strpbrk - returns first occurance of match
  * @s: pointer to start of string to search
@@ -9,6 +8,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
+	char *p = 0;
 
 	for (i = 0; s[i]; i++)
 	{
@@ -16,5 +16,5 @@ char *_strpbrk(char *s, char *accept)
 			if (s[i] == accept[j])
 				return (s + i);
 	}
-	return (NULL);
+	return (p);
 }

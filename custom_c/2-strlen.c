@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _strlen - returns length of a string
  * @s: pointer to string to count

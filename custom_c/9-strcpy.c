@@ -1,4 +1,3 @@
-
 /**
  * _strcpy - copies string from one char array to another
  * @dest: pointer to destination array
