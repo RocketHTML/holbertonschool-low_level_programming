@@ -1,0 +1,8 @@
+#!/bin/bash
+header=$current_folder/holberton.h
+sed -i '$ d' $header
+sed -i '$ d' $header
+sed -i '$ d' holberton.h
+sed -i '$ d' holberton.h
+echo "#endif" >> $header
+echo "#endif" >> holberton.h
