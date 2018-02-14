@@ -5,5 +5,5 @@ func=$current_folder/$1
 ./betty/betty-style.pl $func
 ./betty/betty-doc.pl $func
 
-gcc -Wall -Werror -Wextra -pedantic $runner $func helpers.c -o post
+gcc -Wall -Werror -Wextra -pedantic $runner $func -Lcustom_c -lholberton -o post
 ./post
