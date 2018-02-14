@@ -1,5 +1,4 @@
 #include <stdlib.h>
-int _strlen(char *s);
 /**
  * _strdup - returns duplicate string
  * @str: char array
@@ -13,7 +12,10 @@ char *_strdup(char *str)
 
 	if (str == 0)
 		return (0);
-	size = _strlen(str) + 1;
+	for (size = 0; str[size]; size++)
+	{
+	}
+	size++;
 	a = malloc(size);
 	if (a == 0)
 		return (0);
