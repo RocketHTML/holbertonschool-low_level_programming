@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * alloc_grid - returns int matrix
  * @width: int
@@ -8,7 +9,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **mallox;
-	int w;
+	int w = width;
 
 	if (width < 1 || height < 1)
 		return (0);
@@ -17,13 +18,15 @@ int **alloc_grid(int width, int height)
 	if (!mallox)
 		return (0);
 
-	for (--height; height >= 0; height--)
+	for (height = height - 1; height >= 0; height--)
 	{
 		mallox[height] = malloc(width * sizeof(int));
+		printf("width: %d\n", width);
 		if (!mallox[height])
 			return (0);
-		for (w = width - 1; w >= 0; w--)
-			mallox[height][w] = 0;
+		for (width = width - 1; width >= 0; width--)
+			mallox[height][width] = 0;
+		width = w;
 	}
 
 	return (mallox);
