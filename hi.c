@@ -1,35 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <string.h>
-/**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
- */
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-    unsigned int i;
-
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
-}
+#include "0x0D-structures_typedef/dog.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -38,17 +8,9 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *p;
-    int i;
+    struct dog my_dog;
 
-    p = malloc(sizeof(char) * 10);
-    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
-    i = 0;
-    while (i < 98)
-    {
-        p[i++] = 98;
-    }
-    simple_print_buffer(p, 98);
-    free(p);
+    init_dog(&my_dog, "Django", 3.5, "Jay");
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
     return (0);
 }
