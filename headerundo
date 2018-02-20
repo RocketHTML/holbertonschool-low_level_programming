@@ -1,5 +1,5 @@
 #!/bin/bash
-header=$current_folder/holberton.h
+header=$current_folder/$h_file
 sed -i '$ d' $header
 sed -i '$ d' $header
 sed -i '$ d' holberton.h

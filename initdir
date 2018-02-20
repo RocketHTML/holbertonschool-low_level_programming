@@ -7,6 +7,6 @@ fi
 
 if [ ! -d $current_folder ]; then
 	mkdir $current_folder
-	cp holberton.h $current_folder
+	cp $h_file $current_folder
 	cp README.md $current_folder
 fi
