@@ -14,7 +14,7 @@ int _strlenNULL(char *x)
 		return (0);
 	for (i = 0; x[i]; i++)
 		;
-	return (i);
+	return (i + 1);
 }
 
 /**
