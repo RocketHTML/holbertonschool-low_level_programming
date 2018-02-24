@@ -3,7 +3,7 @@
 void ctemplate(char *s)
 {
   printf("#include <stdarg.h>\n");
-  printf("/**\n * \n * \n * \n * Return: \n */\n");
+  printf("/**\n *\n *\n *\n * Return:\n */\n");
   printf("%s\n{\n\n\treturn (0);\n}\n", s);
 }
 
