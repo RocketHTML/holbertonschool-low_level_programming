@@ -1,94 +1,11 @@
 #include <stdio.h>
 
-void print_returntype(char *s)
-{
-  int i;
-
-  for (i = 0; s[i] != ' '; i++)
-  {
-     putchar(s[i]);
-  }
-
-}
-
-char *print_param(char *s)
-{
-  char *ss = s;
-  char *a = "array";
-  int isarray = 0;
-  int i;
-  int ret;
-
-  for (i = 0; s[i] != ' '; i++)
-  {}
-  i++;
-
-  while(s[i] == '*')
-  {
-    isarray++;
-    i++;
-  }
-  putchar('@');
-  for (; s[i] != ',' && s[i] != ')'; i++)
-    putchar(s[i]);
-
-  ret = i;
-
-  putchar(':');
-  putchar(' ');
-
-  for (i = 0; s[i] != ' '; i++)
-    putchar(s[i]);
-
-  while (isarray--)
-    printf(" %s", a);
-
-  return (s + ret);
-}
-
-void print_params(char *s, int j)
-{
-  char *p = (s + j + 1);
-
-  if (*p == ')')
-    return;
-
-  while(1)
-  {
-    printf(" * ");
-    p = print_param(p);
-    putchar('\n');
-    if(*p == ')')
-      break;
-    p += 2;
-  }
-
-}
-
 void ctemplate(char *s)
 {
-  int i;
-  char *p;
-  
-  for (i = 0; s[i] != ' '; i++)
-  {}
-  i++;
-  printf("/**\n * ");
-  for (; s[i] != '('; i++)
-  {
-    putchar(s[i]);
-  }
-  printf(" - returns ");
-  print_returntype(s);
-  putchar('\n');
-  print_params(s, i);
-  printf(" * Return: ");
-  print_returntype(s);
-  printf("\n */\n");
-
+  printf("#include <stdarg.h>\n");
+  printf("/**\n * \n * \n * \n * Return: \n */\n");
   printf("%s\n{\n\n\treturn (0);\n}\n", s);
 }
-
 
 int main(int argc, char *argv[])
 {

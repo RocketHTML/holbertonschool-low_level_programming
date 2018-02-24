@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "dog.h"
+#include "variadic_functions.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -8,9 +8,11 @@
  */
 int main(void)
 {
-    dog_t *my_dog;
+    int sum;
 
-    my_dog = new_dog("Ghost", 4.75, "Jon Snow");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    sum = sum_them_all(2, 98, 1024);
+    printf("%d\n", sum);
+    sum = sum_them_all(4, 98, 1024, 402, -1024);
+    printf("%d\n", sum);    
     return (0);
 }
