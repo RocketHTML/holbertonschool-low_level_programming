@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	void (*func_list[4])(va_list) = {print_c, print_i, print_f, print_s};
 
 	va_start(ap, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		while (j < 4)
 		{
