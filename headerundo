@@ -2,7 +2,7 @@
 header=$current_folder/$h_file
 sed -i '$ d' $header
 sed -i '$ d' $header
-sed -i '$ d' holberton.h
-sed -i '$ d' holberton.h
+sed -i '$ d' $h_file
+sed -i '$ d' $h_file
 echo "#endif" >> $header
-echo "#endif" >> holberton.h
+echo "#endif" >> $h_file

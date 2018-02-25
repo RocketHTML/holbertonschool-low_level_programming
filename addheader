@@ -1,5 +1,7 @@
 #!/bin/bash
 header=$1/$h_file
+prototype=$2
 sed -i '$ d' $header
-echo $2 >> $header
+set -f
+echo $prototype >> $header
 echo "#endif" >> $header

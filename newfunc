@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -ne 2 ]; then
-	echo "Usage: <filename> <prototype>"
+	echo "Usage: '<filename>' '<prototype>'"
 	exit 1
 fi
 
@@ -11,6 +11,7 @@ cp $h_file $current_folder
 cp README.md $current_folder
 fi
 
+set -f
 ./addheader $current_folder "$2;"
 ./addheader . "$2;"
 ./create "$2" > $current_folder/$1
