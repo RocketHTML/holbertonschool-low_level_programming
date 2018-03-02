@@ -28,7 +28,11 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!head)
 		return (NULL);
-
+	if (!str)
+	{
+		free(new);
+		return (NULL);
+	}
 	new->str = strdup(str);
 	new->len = _strlen(str);
 	new->next = *head;
