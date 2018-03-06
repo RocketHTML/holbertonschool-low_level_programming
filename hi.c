@@ -6,13 +6,23 @@
  */
 int main(void)
 {
-    list_t *head;
+    listint_t *head;
+    listint_t *new;
+    listint_t hello = {8, NULL};
+    size_t n;
 
-    head = NULL;
-    add_node_end(&head, "Jennie");
-    add_node_end(&head, "love");
-    print_list(head);
-    free_list(head);
-    head = NULL;
+    head = &hello;
+    new = malloc(sizeof(listint_t));
+    if (new == NULL)
+    {
+        printf("Error\n");
+        return (1);
+    }
+    new->n = 9;
+    new->next = head;
+    head = new;
+    n = print_listint(head);
+    printf("-> %lu elements\n", n);
+    free(new);
     return (0);
 }

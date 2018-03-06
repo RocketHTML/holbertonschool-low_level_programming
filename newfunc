@@ -6,9 +6,7 @@ if [ "$#" -ne 2 ]; then
 fi
 
 if [ ! -d $current_folder ]; then
-mkdir $current_folder
-cp $h_file $current_folder
-cp README.md $current_folder
+./initdir
 fi
 
 set -f
