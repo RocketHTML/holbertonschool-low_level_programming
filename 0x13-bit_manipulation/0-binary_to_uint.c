@@ -42,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 	while (b[i])
 	{
 		sum += (b[i] - '0') * d;
-		d >> 2;
+		d >>= 1;
 		i++;
 	}
 	return (sum);
