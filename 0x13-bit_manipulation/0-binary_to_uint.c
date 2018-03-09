@@ -10,6 +10,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int long d;
 	unsigned int len;
 	unsigned int i;
+	unsigned int leftmost;
+	unsigned int leftfound = 0;
 
 	sum = 0;
 	len = 0;
@@ -21,11 +23,17 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[len] != '1' && b[len] != '0')
 			return (0);
+		if (b[len] == '1' && leftfound == 0)
+		{
+			leftmost = len;
+			leftfound = 1;
+		}
 		len++;
 	}
 
-	/*d = power(2, len - 1);*/
+	len = len - leftmost;
 	d = d << (len - 1);
+	i = leftmost;
 	while (b[i])
 	{
 		sum += (b[i] - '0') * d;
