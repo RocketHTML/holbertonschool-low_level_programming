@@ -1,33 +1,20 @@
 #include "holberton.h"
 /**
- * power - returns power
- * @base: base
- * @y: power
- * Return: powered n
- */
-unsigned int power(unsigned int base, unsigned int y)
-{
-	unsigned int d = 1;
-
-	while (y)
-	{
-		d *= base;
-		y--;
-	}
-	return (d);
-}
-/**
  * binary_to_uint - change binary to int
  * @b: string of binary
  * Return: unsigned int
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
-	unsigned int len = 0;
-	unsigned int d = 1;
-	unsigned int i = 0;
+	unsigned int long sum;
+	unsigned int long d;
+	unsigned int len;
+	unsigned int i;
 
+	sum = 0;
+	len = 0;
+	d = 1;
+	i = 0;
 	if (!b || !*b)
 		return (0);
 	while (b[len])
