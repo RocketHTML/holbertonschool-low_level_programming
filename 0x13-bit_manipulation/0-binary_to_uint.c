@@ -37,11 +37,12 @@ unsigned int binary_to_uint(const char *b)
 		len++;
 	}
 
-	d = power(2, len - 1);
+	/*d = power(2, len - 1);*/
+	d = d << (len - 1);
 	while (b[i])
 	{
 		sum += (b[i] - '0') * d;
-		d /= 2;
+		d >> 2;
 		i++;
 	}
 	return (sum);
