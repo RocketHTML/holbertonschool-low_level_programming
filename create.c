@@ -2,7 +2,7 @@
 
 void ctemplate(char *s)
 {
-  printf("#include \"lists.h\"\n");
+  printf("#include \"holberton.h\"\n");
   printf("/**\n *\n *\n *\n * Return:\n */\n");
   printf("%s\n{\n\n\treturn (0);\n}\n", s);
 }
