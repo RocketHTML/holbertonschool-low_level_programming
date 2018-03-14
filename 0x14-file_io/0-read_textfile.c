@@ -28,12 +28,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read_status = read(fd, buf, letters);
 	if (read_status <= 0)
+	{
+		free(buf);
 		return (0);
+	}
 	close(fd);
 
 	write_status = write(STDOUT_FILENO, buf, read_status);
 	if (!write_status)
+	{
+		free(buf)
 		return (0);
+	}
 	free(buf);
 	return (write_status);
 }
