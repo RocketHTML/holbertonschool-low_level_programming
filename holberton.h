@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <limits.h>
 void _putchar(int x);
 void print_alphabet(void);
 void print_alphabet_x10(void);
