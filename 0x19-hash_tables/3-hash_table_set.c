@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		runner = ht->array[idx];
-		while(runner->next != NULL)
+		while (runner->next != NULL)
 			runner = runner->next;
 		runner->next = node;
 	}
