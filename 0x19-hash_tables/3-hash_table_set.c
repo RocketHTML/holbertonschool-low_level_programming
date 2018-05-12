@@ -13,26 +13,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *runner = NULL;
 
-	if (ht == NULL || *ht == NULL || key == NULL || strlen(key) == 0)
+	if (ht == NULL || key == NULL || strlen(key) == 0)
 		return (0);
 
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (0);
-	node->key = key;
-	node->value = value;
+	node->key = strdup(key);
+	node->value = strdup(value);
 	node->next = NULL;
 
-	idx = key_index(key, ht->size);
+	idx = key_index((unsigned char *)key, ht->size);
 
 	if (ht->array[idx] == NULL)
 		ht->array[idx] = node;
 	else
 	{
 		runner = ht->array[idx];
-		while (runner->next != NULL)
-			runner = runner->next;
-		runner->next = node;
+		node->next = runner;
+		ht->array[idx] = node;
 	}
 
 	return (1);
