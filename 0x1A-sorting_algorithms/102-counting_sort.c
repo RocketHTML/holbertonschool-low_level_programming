@@ -15,7 +15,10 @@ void finalarray(int *array, int *newarray, size_t size)
 
 	finalarray = malloc(sizeof(int) * size);
 	if (finalarray == NULL)
+	{
+		free(newarray);
 		return;
+	}
 
 
 	for (i = 0; i < size; i++)
