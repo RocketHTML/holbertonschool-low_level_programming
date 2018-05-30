@@ -31,6 +31,7 @@ void finalarray(int *array, int *newarray, size_t size)
 	{
 		array[i] = finalarray[i];
 	}
+	free(finalarray);
 }
 
 /**
@@ -76,13 +77,13 @@ void addarray(int *newarray, int newsize)
  * @array: array to count
  * @newarray: array of ranges
  */
-void countarray(int *array, int *newarray)
+void countarray(int *array, int *newarray, size_t size)
 {
 	unsigned int i = 0;
 	unsigned int j = 0;
 
 
-	while (array[i] != '\0')
+	while (i < size)
 	{
 		j = array[i];
 		newarray[j] += 1;
@@ -97,23 +98,24 @@ void countarray(int *array, int *newarray)
  */
 void counting_sort(int *array, size_t size)
 {
-	int i = 0;
-	int newsize;
+	unsigned int i = 0;
+	unsigned int newsize;
 	int *newarray;
 
+	if (array == NULL)
+		return;
 
 	newsize = array[0];
 
 	/* finds size of new array */
-	while (array[i] != '\0')
+	while (i < size)
 	{
-		if (array[i] > newsize)
-		newsize = array[i];
-
+		if (array[i] > (int) newsize)
+			newsize = array[i];
 		i++;
 	}
 	newsize += 1;
-	newarray = malloc(sizeof(int) * newsize + 1);
+	newarray = malloc(sizeof(int) * newsize);
 	if (newarray == NULL)
 		return;
 
@@ -122,10 +124,10 @@ void counting_sort(int *array, size_t size)
 	{
 		newarray[i] = 0;
 	}
-	newarray[i] = '\0';
 
-	countarray(array, newarray);
+	countarray(array, newarray, size);
 	addarray(newarray, newsize);
 	shiftarray(newarray, newsize);
 	finalarray(array, newarray, size);
+	free(newarray);
 }
