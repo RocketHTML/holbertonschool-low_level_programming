@@ -26,7 +26,7 @@ void print_range(int *b, int i, int j)
  * @i: offset from a
  * @j: offset from a
  */
-void ms(int *a, int *b, int i, int j, int depth)
+void ms(int *a, int *b, int i, int j)
 {
 	int mid = (j - i + 1) / 2;
 	int x;
@@ -35,13 +35,11 @@ void ms(int *a, int *b, int i, int j, int depth)
 	int leftend = right;
 	int rightend = j + 1;
 
-	if (depth >= 15)
-		return;
 	if (i == j)
 		return;
 
-	ms(a, b, left, right - 1, depth + 1);
-	ms(a, b, right, rightend - 1, depth + 1);
+	ms(a, b, left, right - 1);
+	ms(a, b, right, rightend - 1);
 	printf("Merging...\n[left]: ");
 	print_range(a, left, leftend - 1);
 	printf("\n[right]: ");
@@ -85,6 +83,6 @@ void merge_sort(int *array, size_t size)
 	b = malloc(sizeof(int) * size);
 	if (b == NULL)
 		return;
-	ms(array, b, 0, size - 1, 0);
+	ms(array, b, 0, size - 1);
 	free(b);
 }
