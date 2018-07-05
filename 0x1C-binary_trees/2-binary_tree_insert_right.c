@@ -4,6 +4,7 @@
  * binary_tree_insert_right - inserts to the right, replaces node that is there
  * @parent: pointer to parent
  * @value: value of new node
+ * Return: pointer to new node
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
