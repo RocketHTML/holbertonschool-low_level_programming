@@ -4,8 +4,9 @@
 # Can edit the SRC variable and MAIN_C env variable before calling make
 CC = gcc
 MAIN = $(MAIN_C)
-SRC = $(MAIN) 0-binary_tree_node.c binary_tree_print.c 1-binary_tree_insert_left.c
-OBJ = $(SRC:.c=.o) *-main.o
+SRC = $(MAIN) $(wildcard *binary*.c)
+OBJ = $(SRC:.c=.o)
+ALL_OBJ = *.o
 HEADERS = binary_trees.h
 NAME = main
 RM = rm -f
@@ -17,7 +18,7 @@ $(NAME): $(OBJ)
 $(OBJ): $(HEADERS)
 
 oclean:
-	$(RM) $(OBJ)
+	$(RM) $(ALL_OBJ)
 
 fclean: oclean
 	$(RM) $(NAME)
