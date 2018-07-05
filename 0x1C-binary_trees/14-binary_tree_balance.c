@@ -7,8 +7,17 @@
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	int left_h;
+	int right_h;
+
 	if (tree == NULL)
 		return (0);
 
-	return (binary_tree_height(tree->left) - binary_tree_height(tree->right));
+	left_h = binary_tree_height(tree->left);
+	right_h = binary_tree_height(tree->right);
+	if (binary_tree_is_leaf(tree->left) == 1)
+		left_h = 1;
+	if (binary_tree_is_leaf(tree->right) == 1)
+		right_h = 1;
+	return (left_h - right_h);
 }
