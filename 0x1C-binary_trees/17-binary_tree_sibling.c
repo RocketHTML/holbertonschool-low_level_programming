@@ -1,5 +1,10 @@
 #include "binary_trees.h"
 
+/**
+ * binary_tree_sibling - returns sibling of node
+ * @node: node to return sibling of
+ * Return: sibling node
+ */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
 	binary_tree_t *l;
@@ -14,5 +19,5 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	if (l == node)
 		return (r);
 	else
-		return (l);	
+		return (l);
 }
